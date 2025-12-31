@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bgcolor: #000;
+  --textcolor: #fff;
+  --highlight: #f09;
+  --highlight2: #09f;
+  --textstrong: var(--highlight2);
+  --textstrongheader: var(--highlight);
+  --textstrongheadertoday: #fff;
+  --texthighlight: var(--highlight);
+  --textcode: var(--highlight);
+  --textlink: var(--highlight2);/*#4bf;*/
+  --textlinkhover: var(--highlight);
+  --infolink: var(--highlight2);
+  --infocolor: #888;
+  --infolinkhover: var(--highlight);
+  --footlink: #bbb;
+  --footcolor: #888;
+  --footlinkhover: #ddd;
+/*  --shadow: var(--highlight2);*/
+  --shadow: #551388;
+  --shadowblue: #133c88;
+  --shadowmute: #09f7;
+}
+
+body {
+  background: var(--bgcolor);
+  color: var(--textcolor);
+  line-height: 1.5;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-size: 100%; /* Works in conjunction with the font-size of the wrapper */
+}
+
+.wrapper {
+  font-size: 1.5em;
+}
+
+header, section, footer, nav {
+  display:block;
+}
+
+header #logo {
+  max-width: 100vw;
+  max-height: 25vw;
+  height: 40vh; 
+  margin: 0 auto;
+}
+
+header #logo img,
+header #logo canvas { 
+  max-width: 100%;
+  display: block;
+  object-fit: contain;          
+}
+
+nav {
+  margin: .25em auto 0 auto;
+  max-width: 40em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+nav a {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--texthighlight);
+  text-shadow: 0 .1em 0 var(--shadow);
+}
+
+/*nav a:hover { background: #0004; }*/
+
+section strong { color: var(--textstrong); font-weight: bold; }
+section em { color: var(--texthighlight); font-style: normal; }
+section code { color: var(--textcode); font-family: monospace; }
+section a { color: var(--textlink); font-weight: bold; }
+section a:hover { color: var(--textlinkhover);}
+
+section .info { font-size: .7em; line-height: 1.25; color: var(--infocolor); }
+section .info a {color: var(--infolink); font-weight: bold; }
+section .info a:hover {color: var(--infolinkhover); }
+section .info code {color: var(--highlight2); font-weight: bold; }
+
+section .share { font-size: .7em; line-height: 1; margin: .5rem 0 2rem 0rem; color: var(--texthighlight); }
+section .share b { font-weight: bold; border: none; padding: 0; color: var(--textstrong); }
+
+/*section b { for styling colour swatches in the prompts list 
+  padding: 0.25em;
+  border: 2px solid #000;
+  font-weight: bold;
+}
+*/
+section h1 a { color: inherit; text-decoration: none; }
+section h2 a { color: inherit; text-decoration: none; }
+
+section {
+  box-sizing: border-box;
+  font-size: 1em;
+  max-width: 42em;
+  margin: .5em auto;
+  padding:0 2em 2em 2em;
+}
+
+section p {
+  margin: 1em 0;
+}
+
+p.box {
+  display: inline-block;
+  width: 45%;
+  margin: 1em .5em;
+}
+
+p.box img {
+  display: block;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+p.box em {
+  display: block;
+  text-align: center;
+} 
+
+section hr {
+  margin: 3em 0;
+  border-top: .25em solid var(--textstrong);
+  border-bottom: .25em solid var(--shadow);
+  border-left: none;
+  border-right: none;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  margin: .75em 0 .5em 0;
+  font-size: 1.25em;
+  line-height: 1;
+  font-weight: bold;
+  color: var(--textstrongheader);
+}
+
+section h1 {
+  color: var(--highlight2);
+  text-shadow: 0 .07em 0 var(--shadowblue);
+  font-size: 2em;
+  text-align: center;
+}
+section h1 a:hover { color: var(--highlight2);text-shadow: 0 .07em 0 var(--highlight); }
+section h2 a:hover { color: var(--highlight);text-shadow: 0 .07em 0 var(--highlight2); }
+
+
+section h2 {
+    border-top: 2px solid var(--shadowmute);
+    text-shadow: 0 .07em 0 var(--shadow);
+    font-size: 1.5em;
+    margin: 0 -2rem;
+    padding: .5em 1em 0 1em;
+}
+
+section h2 span a {
+  color: var(--highlight2);
+  text-shadow: 0 .07em 0 var(--shadowblue);
+}
+
+section ul {
+    list-style: disc outside;
+    margin: 1em 0.5em;
+    padding: 0 0.25em;
+}
+
+section ul li {
+  margin: .5em 0;
+}
+
+
+section pre {
+  background:#111;
+  border: solid 1px #000;
+  border-radius: 0.25em;
+  box-shadow: inset 0 0.25em 1em rgba(0,0,0,0.2);
+  color: var(--highlight);
+  padding: 1em;
+  text-shadow: 0 .1em .1em var(--highlight2), 0 0 10px var(--highlight);
+/*  overflow-x: auto;*/
+  margin-top: 1em;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+section pre .completion4 { color: #0fc4; text-shadow: 0 0 3px #0218, 0 0 10px #0fc8;}
+section pre .completion2 { color: #0fc2; text-shadow: 0 0 3px #0214, 0 0 10px #0fc4;}
+section pre .completion1 { color: #0fc1; text-shadow: 0 0 3px #0212, 0 0 10px #0fc2;}
+
+section pre code {
+    color: #0fc;
+}
+
+section pre .cursor {
+  animation: blink 0.8s infinite;
+  border-bottom: solid 2px #0fc4;
+  display: inline-block;
+  height: 1.2em;
+  width: 0.4em;
+}
+
+@keyframes blink {
+  0% {opacity: 0.6}
+  20% {opacity: 0.6}
+  100% {opacity: 0}
+}
+
+footer {
+  color: var(--footcolor);
+  font-size: 0.6em;
+  margin: 1em auto 0;
+  max-width: 42em;
+  padding: 1em;
+  text-align: left;
+}
+
+footer a { color: var(--footlinkhover); }
+
+@media (max-width: 640px) {
+  .wrapper {
+    font-size: 0.9em;
+  }
+}
+
+h2.today {
+  font-size: 2em;
+  color: var(--textstrongheadertoday);
+  text-shadow: 0 .07em 0 var(--shadow);
+  border-top: 1rem solid var(--shadow);
+  border-right: 1rem solid var(--shadow);
+
+  .credit {
+    color: var(--textstrongheadertoday);
+  }
+}
+.credit {
+  font-size: 0.5em;
+  color: var(--textstrongheader);
+}
+.credit a {
+  text-decoration: none;
+}
+
