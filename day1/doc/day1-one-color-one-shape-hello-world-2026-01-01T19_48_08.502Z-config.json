@@ -1,0 +1,13 @@
+{
+  "name": "day1-one-color-one-shape",
+  "seed": "hello world",
+  "width": 540,
+  "height": 720,
+  "fps": 30,
+  "duration": 150,
+  "exportVideo": false,
+  "isAnimated": false,
+  "renderAsVector": false,
+  "plottingRadiusScaleFactor": 1.75,
+  "circumferenceSteps": 12
+}

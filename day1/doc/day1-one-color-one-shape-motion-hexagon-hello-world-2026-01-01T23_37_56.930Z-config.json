@@ -1,0 +1,16 @@
+{
+  "name": "day1-one-color-one-shape-motion-hexagon",
+  "seed": "hello world",
+  "width": 540,
+  "height": 960,
+  "fps": 30,
+  "duration": 720,
+  "exportVideo": true,
+  "isAnimated": true,
+  "renderAsVector": false,
+  "plottingRadiusScaleFactor": 1.8,
+  "circumferenceSteps": 10,
+  "concentricRings": 1,
+  "overlapFactor": 1,
+  "polygonSideCount": 6
+}
