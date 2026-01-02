@@ -13,7 +13,7 @@ git clone https://github.com/conceptblend/p5sketch-template.git $1
 echo "Removing git connection from template..."
 
 # Remove the connection to the template repo
-cd $1 && rm -rf .git/
+cd $1 && rm -rf .git/ && yarn install
 
 echo "Done!"
 
